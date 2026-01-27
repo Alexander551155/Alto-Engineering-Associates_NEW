@@ -1,0 +1,103 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family: Inter, system-ui, sans-serif;
+  background:#ffffff;
+  color:#0f172a;
+}
+
+/* Card */
+
+.card{
+  text-align:center;
+  padding:60px 40px;
+  max-width:520px;
+  width:100%;
+}
+
+/* Company name */
+
+.company{
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight:700;
+  letter-spacing:-0.03em;
+  margin:0 0 14px;
+}
+
+/* Tagline */
+
+.tagline{
+  color:#0b6b37;
+  font-weight:600;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  font-size:13px;
+  margin:0 0 14px;
+}
+
+/* Services */
+
+.services{
+  color:#5b6476;
+  font-size:15px;
+  margin:0 0 26px;
+}
+
+/* Divider */
+
+.divider{
+  width:60px;
+  height:2px;
+  background:#0b6b37;
+  margin:0 auto 28px;
+  opacity:0.5;
+}
+
+/* Contact */
+
+.contact p{
+  margin:0 0 14px;
+  font-size:15px;
+  line-height:1.6;
+}
+
+.contact a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.contact a:hover{
+  text-decoration:underline;
+}
+
+/* Footer */
+
+.legal{
+  margin-top:40px;
+  font-size:13px;
+  color:#6b7280;
+}
+
+.legal a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.legal a:hover{
+  text-decoration:underline;
+}
+
+/* Mobile spacing */
+
+@media (max-width:480px){
+  .card{
+    padding:40px 24px;
+  }
+}
