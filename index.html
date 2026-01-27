@@ -1,47 +1,73 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <title>Alto Engineering Associates GmbH</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <meta name="description" content="Alto Engineering Associates GmbH – Engineering, Architektur & Interiors.">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="assets/css/styles.css">
+<meta charset="utf-8">
+<title>Alto Engineering Associates GmbH</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
-<main class="card">
+<div class="lang-switch">
+  <button onclick="setLang('de')">DE</button>
+  <button onclick="setLang('en')">EN</button>
+</div>
 
-  <h1 class="company">Alto Engineering Associates GmbH</h1>
+<main class="card fade-in green-bg">
 
-  <p class="tagline">
-    Engineering · Architektur · Interiors
+  <!-- LOGO (optional) -->
+  <!-- <img src="assets/img/logo.png" class="logo"> -->
+
+  <h1 class="company" data-de="Alto Engineering Associates GmbH"
+      data-en="Alto Engineering Associates Ltd">
+      Alto Engineering Associates GmbH
+  </h1>
+
+  <p class="tagline"
+     data-de="Engineering · Architektur · Interiors"
+     data-en="Engineering · Architecture · Interiors">
+     Engineering · Architektur · Interiors
   </p>
 
-  <p class="services">
-    Projekte · Planung · Umsetzung
+  <p class="services"
+     data-de="Projekte · Planung · Umsetzung"
+     data-en="Projects · Planning · Delivery">
+     Projekte · Planung · Umsetzung
   </p>
 
-  <div class="divider"></div>
+  <!-- Gallery -->
+  <div class="gallery">
 
-  <div class="contact">
-    <p><strong>Telefon</strong><br>+49 …</p>
-    <p><strong>E-Mail</strong><br><a href="mailto:info@alto-engineering.de">info@alto-engineering.de</a></p>
-    <p><strong>Adresse</strong><br>Straße · PLZ Ort · Deutschland</p>
+    <img src="assets/img/1.jpeg">
+    <img src="assets/img/2.jpeg">
+    <img src="assets/img/3.jpeg">
+
+    <div class="contact-box">
+      <strong>Kontakt</strong><br>
+      Tel: +49 ...<br>
+      info@alto-engineering.de<br>
+      Straße, Stadt
+    </div>
+
+    <img src="assets/img/4.jpeg">
+    <img src="assets/img/5.jpeg">
+
   </div>
 
   <footer class="legal">
-    <a href="#">Impressum</a>
-    <span>·</span>
-    <a href="#">Datenschutz</a>
+    <a href="#">Impressum</a> · <a href="#">Datenschutz</a>
   </footer>
 
 </main>
+
+<script>
+function setLang(lang){
+  document.querySelectorAll('[data-de]').forEach(el=>{
+    el.textContent = el.dataset[lang];
+  });
+}
+</script>
 
 </body>
 </html>
