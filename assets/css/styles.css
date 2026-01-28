@@ -47,9 +47,23 @@ body{
   background:var(--bg);
 }
 
-.green-bg{
+/*.green-bg{
   background: linear-gradient(180deg, #f3fbf7, #ffffff 70%);
+} */
+.green-bg{
+  position: relative;
+  background: linear-gradient(180deg, #f0fbf5, #ffffff 65%);
+  overflow: hidden;
 }
+.green-bg::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: url("../img/18.jpeg") center/cover no-repeat;
+  opacity:0.08;          /* ← Transparenz (0.03 – 0.12 gut) */
+  pointer-events:none;
+}
+
 
 .logo{
   height:50px;
