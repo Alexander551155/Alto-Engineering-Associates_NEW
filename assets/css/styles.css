@@ -217,32 +217,37 @@ body{
   .contact-box{ grid-column: 1 / -1; }
 }*/
 @media (max-width: 600px){
+  body{ align-items: flex-start; } /* oben starten, nicht mitten im Screen */
+
   .card{
-    padding: 36px 18px;
+    margin: 18px 0;
+    padding: 28px 18px;
     min-height: auto;
+    width: min(560px, 94vw);
   }
 
-  .company{ font-size: 30px; }
-  .tagline{ font-size: 12px; }
-  .services{ font-size: 14px; }
+  .company{ font-size: 28px; }
+  .tagline{ font-size: 11px; }
+  .services{ font-size: 13px; margin-bottom: 18px; }
 
   .gallery{
-    grid-template-columns: 1fr; /* 1 Spalte = sauber */
-    gap: 12px;
+    grid-template-columns: repeat(2, 1fr); /* 2 Spalten */
+    gap: 10px;
+    margin-bottom: 18px;
   }
 
   .gallery img{
-    height: 160px; /* größer, wirkt wie Karte */
+    height: 110px; /* kompakter, weniger Scroll */
+    border-radius: 10px;
   }
 
   .contact-box{
-    grid-column: auto; /* normal in Flow */
-    grid-row: auto;
-    padding: 18px;
-    font-size: 15px;
+    grid-column: 1 / -1; /* volle Breite */
+    padding: 14px;
+    font-size: 14px;
+    line-height: 1.35;
   }
 }
-
 
 
 .flag-emoji{
