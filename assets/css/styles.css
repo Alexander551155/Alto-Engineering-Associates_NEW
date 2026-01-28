@@ -118,8 +118,8 @@ body{
   border-radius: 14px;
   padding: 22px;
   font-size: 15px;
-  /*background: #ffffff;*/
-  backdrop-filter: blur(6px);
+  background: #ffffff;
+  /*backdrop-filter: blur(6px); */
   background: rgba(255,255,255,0.9);
   color: #0f172a;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
