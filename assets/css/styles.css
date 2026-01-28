@@ -250,11 +250,12 @@ body{
 
   .card{
     width: min(960px, 96vw);
-    height: calc(100svh - 20px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    height: calc(100svh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
     padding: 18px 14px;
     display: flex;
     flex-direction: column;
   }
+
 
   .company{ font-size: 20px; margin-bottom: 6px; }
   .tagline{ font-size: 10px; margin-bottom: 6px; }
@@ -282,12 +283,16 @@ body{
   .contact-box p{ margin: 6px 0; }
 
   .legal{
-    margin-top: auto; /* klappt jetzt, weil card echte Höhe hat */
-    padding-top: 8px;
+    margin-top: auto !important;
+    margin-bottom: 0 !important;
+    padding-top: 6px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom));
     font-size: 12px;
-    line-height: 1.35;
+    line-height: 1.25;
   }
-}
+  
+  .legal{ margin-top: auto !important; }
+
 
   
 /*ENDE NEW*/
