@@ -74,3 +74,15 @@ function setLang(lang){
 
 </body>
 </html>
+
+
+<script>
+function setLang(lang){
+  document.documentElement.lang = lang; // wichtig für SEO/Browser
+  document.querySelectorAll('[data-de]').forEach(el=>{
+    el.textContent = el.dataset[lang];
+  });
+}
+setLang('de'); // Standard
+</script>
+
