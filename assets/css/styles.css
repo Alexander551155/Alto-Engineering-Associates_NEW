@@ -59,7 +59,7 @@ body{
   content:"";
   position:absolute;
   inset:0;
-  background: url("../img/18.jpeg") center/cover no-repeat;
+  background: url("img/18.jpeg") center/cover no-repeat;
   opacity:0.08;          /* ← Transparenz (0.03 – 0.12 gut) */
   pointer-events:none;
 }
