@@ -246,14 +246,19 @@ body{
   }
 
   /* Karte auf 1 Bildschirm begrenzen */
-  .card{
+  /*.card{
     padding: 18px 14px;
     width: min(960px, 96vw);
     min-height: auto;
     height: calc(100svh - 16px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
-    overflow: hidden;            /* wichtig: kein Scroll */
-  }
+    overflow: hidden;            /* wichtig: kein Scroll 
+  } */
 
+  .card{
+    display: flex;
+    flex-direction: column;
+  }
+  
   /* Headings kleiner, damit alles reinpasst */
   .company{ font-size: 20px; margin-bottom: 6px; }
   .tagline{ font-size: 10px; margin-bottom: 6px; }
@@ -283,13 +288,18 @@ body{
 
   .contact-box p{ margin: 6px 0; }
 
-  /* Footer etwas kompakter */
+  /* Footer etwas kompakter 
   .legal{
     margin-top: 10px;
     font-size: 12px;
   }
   .legal-links{ margin-top: 8px; }
-}
+}*/
+  .legal{
+    margin-top: auto;   /* schiebt Footer ganz nach unten */
+    padding-top: 8px;
+  }
+  
 /*ENDE NEW*/
 
 /* Scroll reveal animation */
