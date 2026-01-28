@@ -204,21 +204,46 @@ body{
   .gallery img{height:80px}
   .contact-box{grid-column:1/-1}
 } */
-@media (max-width: 600px){
+/*@media (max-width: 600px){
   .card{
     padding: 42px 22px;
     min-height: auto;
   }
-
   .gallery{
     grid-template-columns: repeat(2, 1fr);
     gap: 14px;
   }
-
   .gallery img{ height: 120px; }
-
   .contact-box{ grid-column: 1 / -1; }
+}*/
+@media (max-width: 600px){
+  .card{
+    padding: 36px 18px;
+    min-height: auto;
+  }
+
+  .company{ font-size: 30px; }
+  .tagline{ font-size: 12px; }
+  .services{ font-size: 14px; }
+
+  .gallery{
+    grid-template-columns: 1fr; /* 1 Spalte = sauber */
+    gap: 12px;
+  }
+
+  .gallery img{
+    height: 160px; /* größer, wirkt wie Karte */
+  }
+
+  .contact-box{
+    grid-column: auto; /* normal in Flow */
+    grid-row: auto;
+    padding: 18px;
+    font-size: 15px;
+  }
 }
+
+
 
 .flag-emoji{
   font-size: 22px;
