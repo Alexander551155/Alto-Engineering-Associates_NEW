@@ -59,7 +59,7 @@ body{
   content:"";
   position:absolute;
   inset:0;
-  background: url("img/18.jpeg") center/cover no-repeat;
+  background: url("../../img/18.jpeg") center/cover no-repeat;
   opacity:0.08;          /* ← Transparenz (0.03 – 0.12 gut) */
   pointer-events:none;
 }
@@ -76,8 +76,13 @@ body{
 } */
 
 .company{
-  color:#0f172a;
+  font-size: clamp(28px,4vw,42px);
+  margin: 0 0 10px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text);
 }
+
 
 .tagline{
   color:var(--green);
@@ -127,9 +132,17 @@ body{
 } */
 
 .contact-box{
-  background:#ffffff;
-  color:#0f172a;
+  grid-column: 2;
+  grid-row: 2;
+  border: 1px solid rgba(25,168,90,0.35);
+  border-radius: 14px;
+  padding: 22px;
+  font-size: 15px;
+  background: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
+
 
 
 
