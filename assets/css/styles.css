@@ -163,3 +163,17 @@ body{
   .gallery img{height:80px}
   .contact-box{grid-column:1/-1}
 }
+
+.flag-emoji{
+  font-size: 22px;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+  user-select: none;
+}
+
+.flag-emoji:hover{
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
