@@ -243,41 +243,33 @@ body{
   body{
     min-height: 100svh;
     height: 100svh;
+    overflow: hidden; /* verhindert Scroll/Bounce */
   }
 
-  /* Karte auf 1 Bildschirm begrenzen */
-  /*.card{
+  .card{
     padding: 18px 14px;
     width: min(960px, 96vw);
-    min-height: auto;
     height: calc(100svh - 16px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
-    overflow: hidden;            /* wichtig: kein Scroll 
-  } */
-
-  .card{
+    overflow: hidden;
     display: flex;
     flex-direction: column;
   }
-  
-  /* Headings kleiner, damit alles reinpasst */
+
   .company{ font-size: 20px; margin-bottom: 6px; }
   .tagline{ font-size: 10px; margin-bottom: 6px; }
   .services{ font-size: 12px; margin-bottom: 12px; }
 
-  /* WICHTIG: wieder Desktop-Grid */
   .gallery{
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
     margin-bottom: 12px;
   }
 
-  /* Bilder klein + gleichmäßig */
   .gallery img{
-    height: clamp(56px, 10svh, 82px);  /* passt sich an Höhe an */
+    height: clamp(56px, 10svh, 82px);
     border-radius: 10px;
   }
 
-  /* Kontakt bleibt in der Mitte wie Desktop */
   .contact-box{
     grid-column: 2;
     grid-row: 2;
@@ -288,18 +280,18 @@ body{
 
   .contact-box p{ margin: 6px 0; }
 
-  /* Footer etwas kompakter 
+  /* Footer ganz unten */
   .legal{
-    margin-top: 10px;
-    font-size: 12px;
-  }
-  .legal-links{ margin-top: 8px; }
-}*/
-  .legal{
-    margin-top: auto;   /* schiebt Footer ganz nach unten */
+    margin-top: auto;
     padding-top: 8px;
+    font-size: 12px;
+    line-height: 1.4;
   }
+
+  .legal-links{
+    margin-top: 8px;
   }
+}
   
 /*ENDE NEW*/
 
