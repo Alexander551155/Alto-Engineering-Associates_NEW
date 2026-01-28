@@ -165,8 +165,10 @@ body{
 
 
 .legal{
-  font-size:13px;
-  color:var(--muted);
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.6;
 }
 
 .legal a{
