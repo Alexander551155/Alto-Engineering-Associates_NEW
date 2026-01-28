@@ -84,7 +84,7 @@ function setLang(lang){
 }
 setLang('de'); // Standard
 
-  /* Scroll reveal */
+/* Scroll reveal */
 const els = document.querySelectorAll('.reveal');
 const io = new IntersectionObserver((entries)=>{
   entries.forEach(e=>{
@@ -93,8 +93,14 @@ const io = new IntersectionObserver((entries)=>{
 },{ threshold: 0.15 });
 
 els.forEach(el=>io.observe(el));
+
+/* Year auto update */
+const yearEl = document.getElementById('year');
+if(yearEl){
+  yearEl.textContent = new Date().getFullYear();
+}
 </script>
-  
+ 
 </body>
 </html>
 
