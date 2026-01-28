@@ -73,14 +73,6 @@
 
 <script>
 function setLang(lang){
-  document.querySelectorAll('[data-de]').forEach(el=>{
-    el.textContent = el.dataset[lang];
-  });
-}
-</script>
-
-<script>
-function setLang(lang){
   document.documentElement.lang = lang; // wichtig für SEO/Browser
   document.querySelectorAll('[data-de]').forEach(el=>{
     el.textContent = el.dataset[lang];
