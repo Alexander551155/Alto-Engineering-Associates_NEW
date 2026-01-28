@@ -1,5 +1,5 @@
 :root{
-  --green:#0b6b37;
+  --green:#19a85a;
   --bg:#ffffff;
   --text:#0f172a;
   --muted:#6b7280;
@@ -48,7 +48,7 @@ body{
 }
 
 .green-bg{
-  background:linear-gradient(180deg, rgba(11,107,55,.06), transparent 60%);
+  background: linear-gradient(180deg, #f3fbf7, #ffffff 70%);
 }
 
 .logo{
@@ -77,18 +77,18 @@ body{
 .gallery{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:10px;
+  gap:16px; /*gap:10px;*/
   margin-bottom:30px;
 }
 
 .gallery img{
   width:100%;
-  height:100px;
+  height:150px; /*height:100px;*/
   object-fit:cover;
   border-radius:8px;
 }
 
-.contact-box{
+/* .contact-box{
   grid-column:2;
   grid-row:2;
   border:1px solid var(--border);
@@ -96,7 +96,18 @@ body{
   padding:12px;
   font-size:13px;
   background:var(--bg);
+} */
+.contact-box{
+  grid-column:2;
+  grid-row:2;
+  border:1px solid rgba(25,168,90,0.35);
+  border-radius:14px;
+  padding:22px;
+  font-size:15px;
+  background:#ffffff;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
+
 
 .legal{
   font-size:13px;
