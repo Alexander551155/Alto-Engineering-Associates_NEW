@@ -70,6 +70,7 @@ body{
 }
 
 .company{
+  font-family: "Space Grotesk", Inter, sans-serif; /*NEW*/
   font-size: clamp(28px,4vw,42px);
   margin: 0 0 10px;
   font-weight: 700;
