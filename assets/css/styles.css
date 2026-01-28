@@ -29,7 +29,7 @@ body{
 
   background:
     linear-gradient(180deg, rgba(240,251,245,0.75), rgba(255,255,255,0.75)), /* wae 0.92*/
-    url("../../img/18.jpeg") center 50% /90% auto no-repeat; /*url("../../img/15.jpeg") center/cover no-repeat fixed;*/ /* Habe "top" eingefügt und hab 15 auf 18 geänder und dann statt "top" "90%" und dann statt "cover" contain */
+    url("../../img/18.jpeg") center 50% /100% auto no-repeat; /*url("../../img/15.jpeg") center/cover no-repeat fixed;*/ /* Habe "top" eingefügt und hab 15 auf 18 geänder und dann statt "top" "90%" und dann statt "cover" contain */
 }
 
 .fade-in{
