@@ -118,7 +118,7 @@ body{
   border-radius: 14px;
   padding: 22px;
   font-size: 15px;
-  background: #ffffff;
+   background: linear-gradient(180deg, #f1f5f3, #e9f3ee); /* #f3f4f6;    hellgrau */
   /*backdrop-filter: blur(6px); */
   background: rgba(255,255,255,0.9);
   color: #0f172a;
