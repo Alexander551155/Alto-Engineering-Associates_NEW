@@ -171,11 +171,30 @@ body{
   margin-left:4px;
   color:inherit;
 }
-
+/*
 @media(max-width:600px){
   .gallery img{height:80px}
   .contact-box{grid-column:1/-1}
+} */
+@media (max-width: 600px){
+  .card{ max-width: 92vw; }
+
+  .gallery{
+    grid-template-columns: repeat(2, 1fr); /* statt 3 */
+    gap: 14px;
+  }
+
+  .gallery img{
+    height: 120px; /* etwas größer */
+  }
+
+  /* Kontaktbox über volle Breite und zwischen den Bildern */
+  .contact-box{
+    grid-column: 1 / -1;
+    order: 4; /* Kontakt nach 3 Bildern (optional) */
+  }
 }
+
 
 .flag-emoji{
   font-size: 22px;
