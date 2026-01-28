@@ -15,7 +15,7 @@
   }
 } */
 
-*{box-sizing:border-box}
+{box-sizing:border-box}
 
 body{
   margin:0;
@@ -26,7 +26,6 @@ body{
   font-family:Inter,sans-serif;
   background:var(--bg);
   color:var(--text);
-}
 
   background:
     linear-gradient(180deg, rgba(240,251,245,0.92), rgba(255,255,255,0.92)),
@@ -42,7 +41,7 @@ body{
   to{opacity:1;transform:none}
 }
 
-.card{
+/*.card{
   border:1px solid var(--border);
   border-radius:14px;
   padding:50px 40px;
@@ -50,7 +49,20 @@ body{
   width:100%;
   text-align:center;
   background:var(--bg);
+} */
+.card{
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:60px 46px;
+
+  width: min(960px, 92vw);
+  min-height: min(86vh, 760px);
+
+  text-align:center;
+  background: rgba(255,255,255,0.78);
+  backdrop-filter: blur(10px);
 }
+
 
 /*.green-bg{
   background: linear-gradient(180deg, #f3fbf7, #ffffff 70%);
@@ -182,37 +194,20 @@ body{
   .contact-box{grid-column:1/-1}
 } */
 @media (max-width: 600px){
-  /*.card{ max-width: 92vw; } */
   .card{
-  border:1px solid var(--border);
-  border-radius:18px;
-  padding:60px 46px;
-
-  width: min(960px, 92vw);     /* größer */
-  min-height: min(86vh, 760px);/* “groß” auf Desktop */
-  text-align:center;
-
-  background: rgba(255,255,255,0.78); /* glass */
-  backdrop-filter: blur(10px);
-}
-
+    padding: 42px 22px;
+    min-height: auto;
+  }
 
   .gallery{
-    grid-template-columns: repeat(2, 1fr); /* statt 3 */
+    grid-template-columns: repeat(2, 1fr);
     gap: 14px;
   }
 
-  .gallery img{
-    height: 120px; /* etwas größer */
-  }
+  .gallery img{ height: 120px; }
 
-  /* Kontaktbox über volle Breite und zwischen den Bildern */
-  .contact-box{
-    grid-column: 1 / -1;
-    order: 4; /* Kontakt nach 3 Bildern (optional) */
-  }
+  .contact-box{ grid-column: 1 / -1; }
 }
-
 
 .flag-emoji{
   font-size: 22px;
