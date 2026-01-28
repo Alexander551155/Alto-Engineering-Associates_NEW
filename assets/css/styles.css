@@ -216,36 +216,57 @@ body{
   .gallery img{ height: 120px; }
   .contact-box{ grid-column: 1 / -1; }
 }*/
-@media (max-width: 600px){
-  body{ align-items: flex-start; } /* oben starten, nicht mitten im Screen */
+@media (max-width: 480px){
 
   .card{
-    margin: 18px 0;
-    padding: 28px 18px;
+    padding: 32px 16px;
     min-height: auto;
-    width: min(560px, 94vw);
   }
 
-  .company{ font-size: 28px; }
+  .company{ font-size: 26px; }
   .tagline{ font-size: 11px; }
-  .services{ font-size: 13px; margin-bottom: 18px; }
+  .services{ font-size: 13px; }
 
   .gallery{
-    grid-template-columns: repeat(2, 1fr); /* 2 Spalten */
+    grid-template-columns: 1fr;
     gap: 10px;
-    margin-bottom: 18px;
   }
 
   .gallery img{
-    height: 110px; /* kompakter, weniger Scroll */
-    border-radius: 10px;
+    height: 140px;
   }
 
   .contact-box{
-    grid-column: 1 / -1; /* volle Breite */
-    padding: 14px;
+    padding: 16px;
     font-size: 14px;
-    line-height: 1.35;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px){
+
+  .card{
+    padding: 42px 22px;
+    min-height: auto;
+    width: min(640px, 94vw);
+  }
+
+  .company{ font-size: 30px; }
+  .tagline{ font-size: 12px; }
+  .services{ font-size: 14px; }
+
+  .gallery{
+    grid-template-columns: repeat(2, 1fr); /* wie Desktop */
+    gap: 12px;
+  }
+
+  .gallery img{
+    height: 130px;
+  }
+
+  .contact-box{
+    grid-column: 1 / -1;
+    padding: 18px;
+    font-size: 15px;
   }
 }
 
