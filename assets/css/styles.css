@@ -256,7 +256,7 @@ body{
     align-items: flex-start;
     padding-top: calc(10px + env(safe-area-inset-top));
     padding-bottom: calc(10px + env(safe-area-inset-bottom));
-    overflow: hidden; /* Startseite: kein Scroll */
+    overflow: auto; /* Startseite: kein Scroll hidden; */
   }
 
   .card{
@@ -266,7 +266,7 @@ body{
     padding: 18px 14px;
     display: flex;
     flex-direction: column;
-    overflow: hidden; /* Startseite: kein Scroll */
+    overflow: auto; /* Startseite: kein Scroll  hidden; */
   }
 
   .gallery{
