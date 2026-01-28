@@ -174,20 +174,31 @@ body{
 }
 
 .lang-switch{
-  position:fixed;
-  top:15px;
-  right:15px;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 9999; /* wichtig: immer oben */
+  display: flex;
+  gap: 8px;
 }
 
-.lang-switch button{
-  background:none;
-  border:1px solid var(--border);
-  padding:4px 8px;
-  cursor:pointer;
-  border-radius:6px;
-  margin-left:4px;
-  color:inherit;
+.flag-emoji{
+  font-size: 22px;
+  cursor: pointer;
+  user-select: none;
+  background: rgba(255,255,255,0.75);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 6px 8px;
+  line-height: 1;
+  backdrop-filter: blur(8px);
 }
+
+.flag-emoji:hover{
+  transform: scale(1.12);
+  opacity: 0.9;
+}
+
 /*
 @media(max-width:600px){
   .gallery img{height:80px}
