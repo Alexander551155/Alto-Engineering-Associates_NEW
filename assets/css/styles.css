@@ -6,15 +6,6 @@
   --border:rgba(0,0,0,0.08);
 }
 
-/*@media (prefers-color-scheme: dark){
-  :root{
-    --bg:#0b1220;
-    --text:#e5e7eb;
-    --muted:#9ca3af;
-    --border:rgba(255,255,255,0.15);
-  }
-} */
-
 *{box-sizing:border-box}
 
 body{
@@ -41,15 +32,6 @@ body{
   to{opacity:1;transform:none}
 }
 
-/*.card{
-  border:1px solid var(--border);
-  border-radius:14px;
-  padding:50px 40px;
-  max-width:700px;
-  width:100%;
-  text-align:center;
-  background:var(--bg);
-} */
 .card{
   border:1px solid var(--border);
   border-radius:18px;
@@ -87,11 +69,6 @@ body{
   margin-bottom:20px;
 }
 
-/*.company{
-  font-size:clamp(28px,4vw,42px);
-  margin:0 0 10px;
-} */
-
 .company{
   font-size: clamp(28px,4vw,42px);
   margin: 0 0 10px;
@@ -127,27 +104,6 @@ body{
   object-fit:cover;
   border-radius:8px;
 }
-
-
-/* .contact-box{
-  grid-column:2;
-  grid-row:2;
-  border:1px solid var(--border);
-  border-radius:10px;
-  padding:12px;
-  font-size:13px;
-  background:var(--bg);
-} */
-/*.contact-box{
-  grid-column:2;
-  grid-row:2;
-  border:1px solid rgba(25,168,90,0.35);
-  border-radius:14px;
-  padding:22px;
-  font-size:15px;
-  background:#ffffff;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
-} */
 
 .contact-box{
   grid-column: 2;
@@ -214,24 +170,7 @@ body{
   transform: scale(1.12);
   opacity: 0.9;
 }
-
-/*
-@media(max-width:600px){
-  .gallery img{height:80px}
-  .contact-box{grid-column:1/-1}
-} */
-/*@media (max-width: 600px){
-  .card{
-    padding: 42px 22px;
-    min-height: auto;
-  }
-  .gallery{
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-  }
-  .gallery img{ height: 120px; }
-  .contact-box{ grid-column: 1 / -1; }
-}*/
+/* ANFANG OLD
 @media (max-width: 480px){
   .card{
     padding: 32px 16px;
@@ -254,7 +193,7 @@ body{
   .contact-box{
     padding: 16px;
     font-size: 14px;
-    grid-column: 1 / -1; /* oder: auto */
+    grid-column: 1 / -1; 
     grid-row: auto;
   }
 }
@@ -276,7 +215,7 @@ body{
   .tagline{ font-size: 12px; }
   .services{ font-size: 14px; }
   .gallery{
-    grid-template-columns: repeat(2, 1fr); /* wie Desktop */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 12px;
   }
   .gallery img{
@@ -293,9 +232,63 @@ body{
     font-size: 15px;
   }
 
-
   
+}  OLD ENDE*/
+
+/*ANFANG NEW*/
+@media (max-width: 480px){
+
+  body{
+    min-height: 100svh;
+  }
+
+  /* Karte auf 1 Bildschirm begrenzen */
+  .card{
+    padding: 18px 14px;
+    width: min(960px, 96vw);
+    min-height: auto;
+    height: calc(100svh - 16px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    overflow: hidden;            /* wichtig: kein Scroll */
+  }
+
+  /* Headings kleiner, damit alles reinpasst */
+  .company{ font-size: 20px; margin-bottom: 6px; }
+  .tagline{ font-size: 10px; margin-bottom: 6px; }
+  .services{ font-size: 12px; margin-bottom: 12px; }
+
+  /* WICHTIG: wieder Desktop-Grid */
+  .gallery{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  /* Bilder klein + gleichmäßig */
+  .gallery img{
+    height: clamp(56px, 10svh, 82px);  /* passt sich an Höhe an */
+    border-radius: 10px;
+  }
+
+  /* Kontakt bleibt in der Mitte wie Desktop */
+  .contact-box{
+    grid-column: 2;
+    grid-row: 2;
+    padding: 10px 8px;
+    font-size: 11px;
+    line-height: 1.25;
+  }
+
+  .contact-box p{ margin: 6px 0; }
+
+  /* Footer etwas kompakter */
+  .legal{
+    margin-top: 10px;
+    font-size: 12px;
+  }
+  .legal-links{ margin-top: 8px; }
 }
+/*ENDE NEW*/
+
 /* Scroll reveal animation */
 .reveal{
   opacity: 0;
