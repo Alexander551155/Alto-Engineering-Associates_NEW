@@ -171,7 +171,7 @@ body{
   line-height: 1.6;
 }
 .legal-links{
-  margin-top: 8px;   /* Abstand nach unten */
+  margin-top: 16px;   /* Abstand nach unten */
 }
 
 .legal a{
