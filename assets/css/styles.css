@@ -29,7 +29,7 @@ body{
 
   background:
     linear-gradient(180deg, rgba(240,251,245,0.75), rgba(255,255,255,0.75)), /* wae 0.92*/
-    url("../../img/18.jpeg") center 50% /100% auto no-repeat fixed; /*url("../../img/15.jpeg") center/cover no-repeat fixed;*/ /* Habe "top" eingefügt und hab 15 auf 18 geänder und dann statt "top" "90%" und dann statt "cover" contain */
+    url("../../img/18.jpeg") center 50% /90% auto no-repeat; /*url("../../img/15.jpeg") center/cover no-repeat fixed;*/ /* Habe "top" eingefügt und hab 15 auf 18 geänder und dann statt "top" "90%" und dann statt "cover" contain */
 }
 
 .fade-in{
@@ -128,6 +128,7 @@ body{
   border-radius:8px;
 }
 
+
 /* .contact-box{
   grid-column:2;
   grid-row:2;
@@ -218,25 +219,24 @@ body{
   .contact-box{ grid-column: 1 / -1; }
 }*/
 @media (max-width: 480px){
-
   .card{
     padding: 32px 16px;
     min-height: auto;
   }
-
   .company{ font-size: 26px; }
   .tagline{ font-size: 11px; }
   .services{ font-size: 13px; }
-
   .gallery{
     grid-template-columns: 1fr;
     gap: 10px;
   }
-
   .gallery img{
     height: 140px;
   }
-
+  .gallery img:last-child{
+    justify-self: center;
+    width: 70%;
+}
   .contact-box{
     padding: 16px;
     font-size: 14px;
@@ -251,8 +251,6 @@ body{
       linear-gradient(180deg, rgba(240,251,245,0.86), rgba(255,255,255,0.86)),
       url("../../img/15.jpeg") center/cover no-repeat;
   }
-  
-
   .card{
     margin-top: calc(10px + env(safe-area-inset-top));
     margin-bottom: calc(10px + env(safe-area-inset-bottom));
@@ -260,27 +258,30 @@ body{
     min-height: auto;
     width: min(640px, 94vw);
   }
-
   .company{ font-size: 30px; }
   .tagline{ font-size: 12px; }
   .services{ font-size: 14px; }
-
   .gallery{
     grid-template-columns: repeat(2, 1fr); /* wie Desktop */
     gap: 12px;
   }
-
   .gallery img{
     height: 130px;
   }
-
+  .gallery img:last-child{
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: 70%;
+}
   .contact-box{
     grid-column: 1 / -1;
     padding: 18px;
     font-size: 15px;
   }
-}
 
+
+  
+}
 /* Scroll reveal animation */
 .reveal{
   opacity: 0;
