@@ -29,7 +29,7 @@ body{
 
   background:
     linear-gradient(180deg, rgba(240,251,245,0.92), rgba(255,255,255,0.92)),
-    url("img/15.jpeg") center/cover no-repeat fixed;
+    url("../../img/15.jpeg") center/cover no-repeat fixed;
 }
 
 .fade-in{
