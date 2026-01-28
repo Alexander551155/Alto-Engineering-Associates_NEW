@@ -239,11 +239,10 @@ body{
 
 /*ANFANG NEW*/
 @media (max-width: 480px){
-
   body{
     min-height: 100svh;
     height: 100svh;
-    align-items: flex-start; /* wichtig: nicht mehr zentrieren */
+    align-items: flex-start;
     padding-top: calc(10px + env(safe-area-inset-top));
     padding-bottom: calc(10px + env(safe-area-inset-bottom));
   }
@@ -251,50 +250,28 @@ body{
   .card{
     width: min(960px, 96vw);
     height: calc(100svh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    min-height: 0;              /* <-- SUPER WICHTIG */
     padding: 18px 14px;
     display: flex;
     flex-direction: column;
   }
 
-
-  .company{ font-size: 20px; margin-bottom: 6px; }
-  .tagline{ font-size: 10px; margin-bottom: 6px; }
-  .services{ font-size: 12px; margin-bottom: 10px; }
-
   .gallery{
+    flex: 1;                    /* <-- nimmt Restplatz */
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
     margin-bottom: 10px;
+    align-content: start;
   }
-
-  .gallery img{
-    height: clamp(56px, 10svh, 82px);
-    border-radius: 10px;
-  }
-
-  .contact-box{
-    grid-column: 2;
-    grid-row: 2;
-    padding: 10px 8px;
-    font-size: 11px;
-    line-height: 1.25;
-  }
-
-  .contact-box p{ margin: 6px 0; }
 
   .legal{
-    margin-top: auto !important;
-    margin-bottom: 0 !important;
-    padding-top: 6px;
+    margin-top: auto;           /* <-- schiebt Footer runter */
     padding-bottom: calc(10px + env(safe-area-inset-bottom));
     font-size: 12px;
     line-height: 1.25;
   }
-  
-  .legal{ margin-top: auto !important; }
-
-
 }
+
 /*ENDE NEW*/
 
 /* Scroll reveal animation */
