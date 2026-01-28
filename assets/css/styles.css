@@ -243,41 +243,34 @@ body{
   body{
     min-height: 100svh;
     height: 100svh;
+    align-items: flex-start; /* wichtig: nicht mehr zentrieren */
+    padding-top: calc(10px + env(safe-area-inset-top));
+    padding-bottom: calc(10px + env(safe-area-inset-bottom));
   }
 
-  /* Karte auf 1 Bildschirm begrenzen */
-  /*.card{
-    padding: 18px 14px;
-    width: min(960px, 96vw);
-    min-height: auto;
-    height: calc(100svh - 16px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
-    overflow: hidden;            /* wichtig: kein Scroll 
-  } */
-
   .card{
+    width: min(960px, 96vw);
+    height: calc(100svh - 20px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    padding: 18px 14px;
     display: flex;
     flex-direction: column;
   }
-  
-  /* Headings kleiner, damit alles reinpasst */
+
   .company{ font-size: 20px; margin-bottom: 6px; }
   .tagline{ font-size: 10px; margin-bottom: 6px; }
-  .services{ font-size: 12px; margin-bottom: 12px; }
+  .services{ font-size: 12px; margin-bottom: 10px; }
 
-  /* WICHTIG: wieder Desktop-Grid */
   .gallery{
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
-  /* Bilder klein + gleichmäßig */
   .gallery img{
-    height: clamp(56px, 10svh, 82px);  /* passt sich an Höhe an */
+    height: clamp(56px, 10svh, 82px);
     border-radius: 10px;
   }
 
-  /* Kontakt bleibt in der Mitte wie Desktop */
   .contact-box{
     grid-column: 2;
     grid-row: 2;
@@ -288,18 +281,14 @@ body{
 
   .contact-box p{ margin: 6px 0; }
 
-  /* Footer etwas kompakter 
   .legal{
-    margin-top: 10px;
-    font-size: 12px;
-  }
-  .legal-links{ margin-top: 8px; }
-}*/
-  .legal{
-    margin-top: auto;   /* schiebt Footer ganz nach unten */
+    margin-top: auto; /* klappt jetzt, weil card echte Höhe hat */
     padding-top: 8px;
+    font-size: 12px;
+    line-height: 1.35;
   }
-  }
+}
+
   
 /*ENDE NEW*/
 
