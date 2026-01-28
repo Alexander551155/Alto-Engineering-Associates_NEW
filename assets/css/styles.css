@@ -252,7 +252,7 @@ body{
   /* ======= DEFAULT: Startseite (1 Screen) ======= */
   body{
     min-height: 100svh;
-    height: calc(100svh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    height: auto;   /*calc(100svh - env(safe-area-inset-top) - env(safe-area-inset-bottom));*/
     align-items: flex-start;
     padding-top: calc(10px + env(safe-area-inset-top));
     padding-bottom: calc(10px + env(safe-area-inset-bottom));
