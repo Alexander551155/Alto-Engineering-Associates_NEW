@@ -28,6 +28,11 @@ body{
   color:var(--text);
 }
 
+  background:
+    linear-gradient(180deg, rgba(240,251,245,0.92), rgba(255,255,255,0.92)),
+    url("img/15.jpeg") center/cover no-repeat fixed;
+}
+
 .fade-in{
   animation:fade 0.9s ease both;
 }
@@ -177,7 +182,20 @@ body{
   .contact-box{grid-column:1/-1}
 } */
 @media (max-width: 600px){
-  .card{ max-width: 92vw; }
+  /*.card{ max-width: 92vw; } */
+  .card{
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:60px 46px;
+
+  width: min(960px, 92vw);     /* größer */
+  min-height: min(86vh, 760px);/* “groß” auf Desktop */
+  text-align:center;
+
+  background: rgba(255,255,255,0.78); /* glass */
+  backdrop-filter: blur(10px);
+}
+
 
   .gallery{
     grid-template-columns: repeat(2, 1fr); /* statt 3 */
