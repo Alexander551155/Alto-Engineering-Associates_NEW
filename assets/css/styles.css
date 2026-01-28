@@ -170,6 +170,9 @@ body{
   text-align: center;
   line-height: 1.6;
 }
+.legal-links{
+  margin-top: 8px;   /* Abstand nach unten */
+}
 
 .legal a{
   color:inherit;
