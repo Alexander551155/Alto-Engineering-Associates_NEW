@@ -192,6 +192,7 @@ body{
   padding: 6px 8px;
   line-height: 1;
   backdrop-filter: blur(8px);
+  transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
 .flag-emoji:hover{
@@ -239,6 +240,8 @@ body{
   .contact-box{
     padding: 16px;
     font-size: 14px;
+    grid-column: 1 / -1; /* oder: auto */
+    grid-row: auto;
   }
 }
 
@@ -246,7 +249,7 @@ body{
   body{
     background:
       linear-gradient(180deg, rgba(240,251,245,0.86), rgba(255,255,255,0.86)),
-      url("../../img/15.jpeg") center/cover no-repeat fixed;
+      url("../../img/15.jpeg") center/cover no-repeat;
   }
   
 
@@ -277,21 +280,6 @@ body{
     font-size: 15px;
   }
 }
-
-
-.flag-emoji{
-  font-size: 22px;
-  cursor: pointer;
-  margin-left: 8px;
-  transition: transform 0.15s ease, opacity 0.15s ease;
-  user-select: none;
-}
-
-.flag-emoji:hover{
-  transform: scale(1.2);
-  opacity: 0.8;
-}
-
 
 /* Scroll reveal animation */
 .reveal{
