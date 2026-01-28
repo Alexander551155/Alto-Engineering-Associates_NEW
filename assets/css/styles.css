@@ -246,26 +246,31 @@ body{
 }  OLD ENDE*/
 
 /*ANFANG NEW*/
+/* MOBILE */
 @media (max-width: 480px){
+
+  /* ======= DEFAULT: Startseite (1 Screen) ======= */
   body{
     min-height: 100svh;
     height: calc(100svh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
     align-items: flex-start;
     padding-top: calc(10px + env(safe-area-inset-top));
     padding-bottom: calc(10px + env(safe-area-inset-bottom));
+    overflow: hidden; /* Startseite: kein Scroll */
   }
 
   .card{
     width: min(960px, 96vw);
     height: calc(100svh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
-    min-height: 0;              /* <-- SUPER WICHTIG */
+    min-height: 0;
     padding: 18px 14px;
     display: flex;
     flex-direction: column;
+    overflow: hidden; /* Startseite: kein Scroll */
   }
 
   .gallery{
-    flex: 1;                    /* <-- nimmt Restplatz */
+    flex: 1;
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
     margin-bottom: 10px;
@@ -273,10 +278,23 @@ body{
   }
 
   .legal{
-    margin-top: auto;           /* <-- schiebt Footer runter */
+    margin-top: auto;
     padding-bottom: calc(10px + env(safe-area-inset-bottom));
     font-size: 12px;
     line-height: 1.25;
+  }
+
+  /* ======= OVERRIDE: Unterseiten (Impressum/Datenschutz) ======= */
+  body.page{
+    height: auto;
+    min-height: 100svh;
+    overflow: auto; /* hier wieder scrollen */
+  }
+
+  body.page .card{
+    height: auto;
+    min-height: 0;
+    overflow: visible; /* Inhalt darf wachsen */
   }
 }
 
