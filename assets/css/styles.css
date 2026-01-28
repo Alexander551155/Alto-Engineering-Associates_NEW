@@ -143,15 +143,17 @@ body{
   color: var(--green);
 }
 
-
+/*
 .lang-switch{
   position: fixed;
   top: calc(12px + env(safe-area-inset-top));
   right: calc(12px + env(safe-area-inset-right));
-  z-index: 9999; /* wichtig: immer oben */
+  z-index: 9999;  wichtig: immer oben 
   display: flex;
   gap: 8px;
-}
+} */
+
+.lang-switch{ display:none; }
 
 .flag-emoji{
   font-size: 22px;
@@ -240,6 +242,7 @@ body{
 
   body{
     min-height: 100svh;
+    height: 100svh;
   }
 
   /* Karte auf 1 Bildschirm begrenzen */
