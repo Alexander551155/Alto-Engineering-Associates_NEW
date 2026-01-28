@@ -249,7 +249,7 @@ body{
   .card{
     padding: 18px 14px;
     width: min(960px, 96vw);
-    height: calc(100svh - 16px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    height: calc(100svh - 8px - env(safe-area-inset-top));
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -281,12 +281,15 @@ body{
   .contact-box p{ margin: 6px 0; }
 
   /* Footer ganz unten */
-  .legal{
-    margin-top: auto;
-    padding-top: 8px;
-    font-size: 12px;
-    line-height: 1.4;
-  }
+.legal{
+  margin-top: auto !important;
+  margin-bottom: 0 !important;
+  padding-top: 8px;
+  padding-bottom: calc(10px + env(safe-area-inset-bottom));
+  font-size: 12px;
+  line-height: 1.4;
+}
+
 
   .legal-links{
     margin-top: 8px;
